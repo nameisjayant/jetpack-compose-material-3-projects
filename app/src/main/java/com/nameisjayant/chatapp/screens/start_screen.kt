@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.nameisjayant.chatapp.R
+import com.nameisjayant.chatapp.components.ButtonComponent
+import com.nameisjayant.chatapp.components.SpacerWidth
 import com.nameisjayant.chatapp.navigation.HOME_SCREEN
 import com.nameisjayant.chatapp.ui.theme.Aqua
 
@@ -45,8 +47,9 @@ fun StartScreen(
         Box(
             modifier = Modifier
                 .padding(top = 220.dp)
-                .align(Alignment.Center)
                 .background(Color.Black)
+                .align(Alignment.Center)
+
         ) {
             Column(
                 modifier = Modifier
@@ -61,33 +64,19 @@ fun StartScreen(
                     )
                 )
                 CustomCheckBox()
-
             }
         }
-        Button(
-            onClick = {
-                navHostController.navigate(HOME_SCREEN)
-            }, modifier = Modifier
-                .fillMaxWidth()
+        ButtonComponent(
+            modifier = Modifier
                 .padding(20.dp)
                 .align(Alignment.BottomCenter)
-                .height(60.dp),
-            shape = RoundedCornerShape(100.dp),
-            elevation = ButtonDefaults.elevatedButtonElevation(0.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.White
-            )
+                .height(60.dp)
         ) {
-            Text(
-                text = stringResource(R.string.get_started), style = TextStyle(
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold
-                )
-            )
+            navHostController.navigate(HOME_SCREEN)
         }
     }
 }
+
 
 @Composable
 fun CustomCheckBox() {
@@ -97,13 +86,13 @@ fun CustomCheckBox() {
     ) {
         Box(
             modifier = Modifier
-                .size(24.dp)
                 .clip(
                     RoundedCornerShape(
                         topStart = 10.dp, topEnd = 10.dp, bottomStart = 80.dp, bottomEnd = 80.dp
                     )
                 )
-                .background(Aqua), contentAlignment = Alignment.Center
+                .background(Aqua)
+                .size(24.dp), contentAlignment = Alignment.Center
         ) {
             Icon(
                 Icons.Default.Check,
@@ -112,7 +101,7 @@ fun CustomCheckBox() {
                 tint = Color.Black
             )
         }
-        Spacer(modifier = Modifier.width(15.dp))
+        SpacerWidth(15.dp)
         Text(
             text = stringResource(R.string.secure_private_messaging), style = TextStyle(
                 color = Color.White,

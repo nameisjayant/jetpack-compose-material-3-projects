@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -40,6 +41,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.nameisjayant.chatapp.R
+import com.nameisjayant.chatapp.components.IconComponentDrawable
+import com.nameisjayant.chatapp.components.IconComponentImageVector
+import com.nameisjayant.chatapp.components.SpacerWidth
 import com.nameisjayant.chatapp.data.Chat
 import com.nameisjayant.chatapp.data.Person
 import com.nameisjayant.chatapp.data.chatList
@@ -73,12 +77,12 @@ fun ChatScreen(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(top = 25.dp)
                     .clip(
                         RoundedCornerShape(
                             topStart = 30.dp, topEnd = 30.dp
                         )
                     )
+                    .padding(top = 25.dp)
                     .background(Color.White)
             ) {
                 LazyColumn(
@@ -86,7 +90,7 @@ fun ChatScreen(
                         start = 15.dp,
                         top = 25.dp,
                         end = 15.dp,
-                        bottom = 50.dp
+                        bottom = 75.dp
                     )
                 ) {
                     items(chatList, key = { it.id }) {
@@ -151,35 +155,28 @@ fun CustomTextField(
     modifier: Modifier = Modifier,
     onValueChange: (String) -> Unit
 ) {
-
-    Card(
+    TextField(
+        value = text, onValueChange = { onValueChange(it) },
+        placeholder = {
+            Text(
+                text = stringResource(R.string.type_message),
+                style = TextStyle(
+                    fontSize = 14.sp,
+                    color = Color.Black
+                ),
+                textAlign = TextAlign.Center
+            )
+        },
+        colors = TextFieldDefaults.textFieldColors(
+            containerColor = Gray400,
+            unfocusedIndicatorColor = Color.Transparent,
+            focusedIndicatorColor = Color.Transparent
+        ),
+        leadingIcon = { CommonIconButton(imageVector = Icons.Default.Add) },
+        trailingIcon = { CommonIconButtonDrawable(R.drawable.mic) },
         modifier = modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(0.dp),
-        shape = RoundedCornerShape(164.dp),
-        border = BorderStroke(1.dp, Gray400)
-    ) {
-        TextField(
-            value = text, onValueChange = { onValueChange(it) },
-            placeholder = {
-                Text(
-                    text = stringResource(R.string.type_message),
-                    style = TextStyle(
-                        fontSize = 14.sp,
-                        color = Color.Black
-                    ),
-                    textAlign = TextAlign.Center
-                )
-            },
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-                focusedIndicatorColor = Color.Transparent
-            ),
-            leadingIcon = { CommonIconButton(imageVector = Icons.Default.Add) },
-            trailingIcon = { CommonIconButtonDrawable(R.drawable.mic) }
-
-        )
-    }
+        shape = RoundedCornerShape(164.dp)
+    )
 
 }
 
@@ -194,11 +191,7 @@ fun CommonIconButton(
             .clip(CircleShape)
             .background(Yellow), contentAlignment = Center
     ) {
-        Icon(
-            imageVector = imageVector, contentDescription = "",
-            tint = Color.Black,
-            modifier = Modifier.size(15.dp)
-        )
+        IconComponentImageVector(icon = imageVector, size = 15.dp, tint = Color.Black)
     }
 
 }
@@ -207,7 +200,6 @@ fun CommonIconButton(
 fun CommonIconButtonDrawable(
     @DrawableRes icon: Int
 ) {
-
     Box(
         modifier = Modifier
             .size(33.dp)
@@ -234,13 +226,9 @@ fun UserNameRow(
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Row {
-            Icon(
-                painter = painterResource(id = person.icon),
-                contentDescription = "",
-                modifier = Modifier.size(42.dp),
-                tint = Color.Unspecified
-            )
-            Spacer(modifier = Modifier.width(10.dp))
+
+            IconComponentDrawable(icon = person.icon, size = 42.dp)
+            SpacerWidth()
             Column {
                 Text(
                     text = person.name, style = TextStyle(
@@ -257,13 +245,7 @@ fun UserNameRow(
                 )
             }
         }
-        IconButton(
-            onClick = {}, modifier = Modifier
-                .size(24.dp)
-                .align(CenterVertically)
-        ) {
-            Icon(Icons.Default.MoreVert, contentDescription = "", tint = Color.White)
-        }
+        IconComponentImageVector(icon = Icons.Default.MoreVert, size = 24.dp, tint = Color.White)
     }
 
 }
