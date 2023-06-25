@@ -86,12 +86,11 @@ fun CustomCheckBox() {
     ) {
         Box(
             modifier = Modifier
-                .clip(
-                    RoundedCornerShape(
+                .background(
+                    Aqua, RoundedCornerShape(
                         topStart = 10.dp, topEnd = 10.dp, bottomStart = 80.dp, bottomEnd = 80.dp
                     )
                 )
-                .background(Aqua)
                 .size(24.dp), contentAlignment = Alignment.Center
         ) {
             Icon(

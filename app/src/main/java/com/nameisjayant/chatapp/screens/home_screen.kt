@@ -71,12 +71,11 @@ fun HomeScreen(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .clip(
-                        RoundedCornerShape(
+                    .background(
+                        Color.White, RoundedCornerShape(
                             topStart = 30.dp, topEnd = 30.dp
                         )
                     )
-                    .background(Color.White)
             ) {
                 BottomSheetSwipeUp(
                     modifier = Modifier
@@ -136,12 +135,13 @@ fun BottomSheetSwipeUp(
 
     Box(
         modifier = modifier
+            .background(
+                Gray400,
+                RoundedCornerShape(90.dp)
+            )
             .width(90.dp)
             .height(5.dp)
-            .clip(RoundedCornerShape(90.dp))
-            .background(
-                Gray400
-            )
+
     )
 }
 
@@ -241,8 +241,7 @@ fun AddStoryLayout(
             Box(
                 modifier = Modifier
                     .size(20.dp)
-                    .clip(CircleShape)
-                    .background(Color.Black),
+                    .background(Color.Black, CircleShape),
                 contentAlignment = Alignment.Center
             ) {
                 IconComponentImageVector(icon = Icons.Default.Add, size = 12.dp, tint = Yellow)

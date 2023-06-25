@@ -72,18 +72,18 @@ fun ChatScreen(
         ) {
             UserNameRow(
                 person = data,
-                modifier = Modifier.padding(top = 60.dp, start = 20.dp, end = 20.dp)
+                modifier = Modifier.padding(top = 60.dp, start = 20.dp, end = 20.dp, bottom = 20.dp)
             )
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .clip(
-                        RoundedCornerShape(
+                    .background(
+                        Color.White, RoundedCornerShape(
                             topStart = 30.dp, topEnd = 30.dp
                         )
                     )
                     .padding(top = 25.dp)
-                    .background(Color.White)
+
             ) {
                 LazyColumn(
                     modifier = Modifier.padding(
@@ -121,9 +121,9 @@ fun ChatRow(
     ) {
         Box(
             modifier = Modifier
-                .clip(RoundedCornerShape(100.dp))
                 .background(
-                    if (chat.direction) LightRed else LightYellow
+                    if (chat.direction) LightRed else LightYellow,
+                    RoundedCornerShape(100.dp)
                 ),
             contentAlignment = Center
         ) {
@@ -175,7 +175,7 @@ fun CustomTextField(
         leadingIcon = { CommonIconButton(imageVector = Icons.Default.Add) },
         trailingIcon = { CommonIconButtonDrawable(R.drawable.mic) },
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(164.dp)
+        shape = CircleShape
     )
 
 }
@@ -187,9 +187,8 @@ fun CommonIconButton(
 
     Box(
         modifier = Modifier
-            .size(33.dp)
-            .clip(CircleShape)
-            .background(Yellow), contentAlignment = Center
+            .background(Yellow, CircleShape)
+            .size(33.dp), contentAlignment = Center
     ) {
         IconComponentImageVector(icon = imageVector, size = 15.dp, tint = Color.Black)
     }
@@ -202,9 +201,8 @@ fun CommonIconButtonDrawable(
 ) {
     Box(
         modifier = Modifier
-            .size(33.dp)
-            .clip(CircleShape)
-            .background(Yellow), contentAlignment = Center
+            .background(Yellow, CircleShape)
+            .size(33.dp), contentAlignment = Center
     ) {
         Icon(
             painter = painterResource(id = icon), contentDescription = "",
