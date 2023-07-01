@@ -10,4 +10,17 @@
     <string name="jayant">Jayant!</string>
     <string name="okay">Okay</string>
     <string name="_12_23_pm">12:23 PM</string>
+
+    <string name="search">Search</string>
+    <string name="chocolate_frappuccino">Chocolate Frappuccino</string>
+    <string name="_20_00">$20.00</string>
+    <string name="see_all">See All</string>
+    <string name="popular">Popular</string>
+    <string name="our_way_of_loving_you_back">Our way of loving\nyou back</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_etiam_at_mi_vitae_augue_feugiat_scelerisque_in_a_eros">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at mi vitae augue feugiat scelerisque in a eros.</string>
+    <string name="add_to_bag">Add to bag</string>
+    <string name="coffee">Coffee</string>
+    <string name="chocolate_cappuccino">Chocolate Cappuccino</string>
+    <string name="_4_5">4.5</string>
+
 </resources>
