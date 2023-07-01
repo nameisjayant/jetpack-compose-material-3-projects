@@ -1,7 +1,6 @@
-package com.nameisjayant.chatapp.screens
+package com.nameisjayant.projects.chat.components.screens
 
 import android.annotation.SuppressLint
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -14,10 +13,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,9 +21,7 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -37,19 +31,19 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.nameisjayant.projects.chat.components.IconComponentDrawable
+import com.nameisjayant.projects.chat.components.IconComponentImageVector
+import com.nameisjayant.projects.chat.components.SpacerHeight
+import com.nameisjayant.projects.chat.components.SpacerWidth
+import com.nameisjayant.projects.chat.components.data.Person
+import com.nameisjayant.projects.chat.components.data.personList
+import com.nameisjayant.projects.chat.components.navigation.CHAT_SCREEN
+import com.nameisjayant.projects.ui.theme.DarkGray
+import com.nameisjayant.projects.ui.theme.Gray
+import com.nameisjayant.projects.ui.theme.Gray400
+import com.nameisjayant.projects.ui.theme.Line
+import com.nameisjayant.projects.ui.theme.Yellow
 import com.nameisjayant.chatapp.R
-import com.nameisjayant.chatapp.components.IconComponentDrawable
-import com.nameisjayant.chatapp.components.IconComponentImageVector
-import com.nameisjayant.chatapp.components.SpacerHeight
-import com.nameisjayant.chatapp.components.SpacerWidth
-import com.nameisjayant.chatapp.data.Person
-import com.nameisjayant.chatapp.data.personList
-import com.nameisjayant.chatapp.navigation.CHAT_SCREEN
-import com.nameisjayant.chatapp.ui.theme.DarkGray
-import com.nameisjayant.chatapp.ui.theme.Gray
-import com.nameisjayant.chatapp.ui.theme.Gray400
-import com.nameisjayant.chatapp.ui.theme.Line
-import com.nameisjayant.chatapp.ui.theme.Yellow
 
 @Composable
 fun HomeScreen(
@@ -175,7 +169,7 @@ fun UserEachRow(
                         )
                         SpacerHeight(5.dp)
                         Text(
-                            text = stringResource(R.string.okay), style = TextStyle(
+                            text = stringResource(com.nameisjayant.chatapp.R.string.okay), style = TextStyle(
                                 color = Gray, fontSize = 14.sp
                             )
                         )

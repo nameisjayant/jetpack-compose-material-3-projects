@@ -1,4 +1,4 @@
-package com.nameisjayant.chatapp.components
+package com.nameisjayant.projects.chat.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape

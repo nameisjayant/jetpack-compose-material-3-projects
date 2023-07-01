@@ -1,4 +1,4 @@
-package com.nameisjayant.chatapp
+package com.nameisjayant.projects
 
 import org.junit.Test
 

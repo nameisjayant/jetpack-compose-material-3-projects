@@ -1,8 +1,7 @@
-package com.nameisjayant.chatapp.screens
+package com.nameisjayant.projects.chat.components.screens
 
 
 import androidx.annotation.DrawableRes
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,14 +11,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -27,9 +21,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.Center
-import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
@@ -41,17 +33,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.nameisjayant.chatapp.R
-import com.nameisjayant.chatapp.components.IconComponentDrawable
-import com.nameisjayant.chatapp.components.IconComponentImageVector
-import com.nameisjayant.chatapp.components.SpacerWidth
-import com.nameisjayant.chatapp.data.Chat
-import com.nameisjayant.chatapp.data.Person
-import com.nameisjayant.chatapp.data.chatList
-import com.nameisjayant.chatapp.ui.theme.Gray
-import com.nameisjayant.chatapp.ui.theme.Gray400
-import com.nameisjayant.chatapp.ui.theme.LightRed
-import com.nameisjayant.chatapp.ui.theme.LightYellow
-import com.nameisjayant.chatapp.ui.theme.Yellow
+import com.nameisjayant.projects.chat.components.IconComponentDrawable
+import com.nameisjayant.projects.chat.components.IconComponentImageVector
+import com.nameisjayant.projects.chat.components.SpacerWidth
+import com.nameisjayant.projects.chat.components.data.Chat
+import com.nameisjayant.projects.chat.components.data.Person
+import com.nameisjayant.projects.chat.components.data.chatList
+import com.nameisjayant.projects.ui.theme.Gray
+import com.nameisjayant.projects.ui.theme.Gray400
+import com.nameisjayant.projects.ui.theme.LightRed
+import com.nameisjayant.projects.ui.theme.LightYellow
+import com.nameisjayant.projects.ui.theme.Yellow
 
 @Composable
 fun ChatScreen(

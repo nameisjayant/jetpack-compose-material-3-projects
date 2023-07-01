@@ -1,12 +1,12 @@
-package com.nameisjayant.chatapp.navigation
+package com.nameisjayant.projects.chat.components.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.nameisjayant.chatapp.screens.ChatScreen
-import com.nameisjayant.chatapp.screens.HomeScreen
-import com.nameisjayant.chatapp.screens.StartScreen
+import com.nameisjayant.projects.chat.components.screens.ChatScreen
+import com.nameisjayant.projects.chat.components.screens.HomeScreen
+import com.nameisjayant.projects.chat.components.screens.StartScreen
 
 @Composable
 fun MainNavigation() {

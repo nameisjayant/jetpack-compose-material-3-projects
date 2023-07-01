@@ -1,4 +1,4 @@
-package com.nameisjayant.chatapp.data
+package com.nameisjayant.projects.chat.components.data
 
 
 import android.os.Parcelable

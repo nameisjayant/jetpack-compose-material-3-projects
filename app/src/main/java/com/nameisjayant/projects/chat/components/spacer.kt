@@ -1,4 +1,4 @@
-package com.nameisjayant.chatapp.components
+package com.nameisjayant.projects.chat.components
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height

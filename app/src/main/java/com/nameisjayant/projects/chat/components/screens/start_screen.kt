@@ -1,4 +1,4 @@
-package com.nameisjayant.chatapp.screens
+package com.nameisjayant.projects.chat.components.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -6,14 +6,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -23,12 +20,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.nameisjayant.projects.chat.components.ButtonComponent
+import com.nameisjayant.projects.chat.components.SpacerWidth
+import com.nameisjayant.projects.chat.components.navigation.HOME_SCREEN
+import com.nameisjayant.projects.ui.theme.Aqua
 import com.nameisjayant.chatapp.R
-import com.nameisjayant.chatapp.components.ButtonComponent
-import com.nameisjayant.chatapp.components.SpacerWidth
-import com.nameisjayant.chatapp.navigation.HOME_SCREEN
-import com.nameisjayant.chatapp.ui.theme.Aqua
-
 @Composable
 fun StartScreen(
     navHostController: NavHostController
