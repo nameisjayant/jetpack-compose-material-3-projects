@@ -23,4 +23,21 @@
     <string name="chocolate_cappuccino">Chocolate Cappuccino</string>
     <string name="_4_5">4.5</string>
 
+    <string name="categories">Categories</string>
+    <string name="placeholder">Chair, desk, lamp etc</string>
+    <string name="heading_text">Explore What\nYour Home Needs</string>
+    <string name="rooms">Rooms</string>
+    <string name="room_des">Furniture for every corners in your home</string>
+    <string name="product_name">Jan Sflanaganvik sofa</string>
+    <string name="add_to_ba">Add to bag</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur velit at massa vehicula, quis fringilla urna gravida.</string>
+    <string name="recommend_products">Sofa you might like</string>
+    <string name="proceed_to_checkout">Proceed to checkout</string>
+    <string name="my_shoping_bag">My Shopping Bag</string>
+    <string name="_599">$599</string>
+    <string name="_5_0">5.0</string>
+    <string name="_98_reviews">98 Reviews</string>
+    <string name="total">Total</string>
+    <string name="_600">$600</string>
+
 </resources>
